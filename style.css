@@ -9,4 +9,46 @@
 .alert{
     display: none;
 }
+.alerts-primary {
+    color:rgb(246, 251, 255);
+    font-weight: 600;
+    text-align: center;
+    background-color: #3498DB;
+    border:1px solid rgb(17, 117, 184);
+}
+.alerts-info {
+    color: #000080;
+    font-weight: 600;
+    text-align: center;
+    background-color: #AED6F1;
+    border:1px solid rgb(17, 133, 211);
+}
+.alerts-success {
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    background-color: #58D68D;
+    border:1px solid rgb(17, 211, 75);
+}
+.alerts-secondary {
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    background-color: #D2B4DE;
+    border:1px solid rgb(139, 0, 173);
+}
+.alerts-warning {
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    background-color: #F4D03F;
+    border-color: #ffeeba;
+}
+.alerts-danger{
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    background-color: #EC7063;
+    border:1px solid rgb(173, 0, 23);
+}
 
