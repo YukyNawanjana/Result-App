@@ -1,48 +1,52 @@
 const marks = document.getElementById('marks');
 const btn = document.querySelector('.submit');
-const alert = document.querySelector('.alert');
+const alertMessage = document.querySelector('.alert');
+
 
 
 btn.addEventListener('click', function(e){
     e.preventDefault();
     const marksvlaue = marks.value;
+       
+    marksResult(marksvlaue);
     
+});
+
+function marksResult(marksvlaue){
     if(marksvlaue){
         if(marksvlaue >= 90){
-            alert.textContent = "Your Result is A+";
-            alert.style.display ="block";
-            alert.classList.add('alerts-primary');
+            displayAlert("Your Result is A+", "primary");
 
         }else if(marksvlaue >=75){
-            alert.textContent = "Your Result is A";
-            alert.style.display ="block";
-            alert.classList.add('alerts-info');
+            displayAlert("Your Result is A", "info");
 
         }else if(marksvlaue >=65){
-            alert.textContent = "Your Result is B";
-            alert.style.display ="block";
-            alert.classList.add('alerts-success');
+            displayAlert("Your Result is B", "success");
 
         }else if(marksvlaue >=55){
-            alert.textContent = "Your Result is C";
-            alert.style.display ="block";
-            alert.classList.add('alerts-secondary');
+            displayAlert("Your Result is C", "secondary");
 
         }else if(marksvlaue >=35){
-            alert.textContent = "Your Result is S";
-            alert.style.display ="block";
-            alert.classList.add('alerts-warning');
+            displayAlert("Your Result is S", "warning");
            
         }else{
-            alert.textContent = "Sorry, You are Exam Fail";
-            alert.style.display ="block";
-            alert.classList.add('alerts-danger');
-            
+            displayAlert("Sorry, You are Exam Fail", "danger");
         }
     }else{
-        alert.textContent = "Sorry Please Enter Your Marks";
-        alert.style.display ="block";
-        alert.classList.add('alerts-danger');
+        displayAlert("Sorry Please Enter Your Marks", "danger");
     }
     marks.value="";
-});
+
+}
+
+
+function displayAlert(text, action){
+    alertMessage.textContent = text;
+    alertMessage.classList.add(`alert-${action}`);
+
+    setTimeout(function(){
+        alertMessage.textContent = '';
+        alertMessage.classList.remove(`alert-${action}`);
+    },2000);
+}
+
