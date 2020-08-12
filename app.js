@@ -1,8 +1,15 @@
 const marks = document.getElementById('marks');
 const btn = document.querySelector('.submit');
 const alertMessage = document.querySelector('.alert');
+const marksList = document.querySelector('.marks-list');
 
 
+btn.addEventListener('click', newMarks);
+
+
+function newMarks(3){
+
+}
 
 btn.addEventListener('click', function(e){
     e.preventDefault();
